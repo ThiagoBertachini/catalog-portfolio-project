@@ -7,7 +7,4 @@ import com.portfolioproject.catalog.entities.Category;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long>{
-	
-	
-
 }
