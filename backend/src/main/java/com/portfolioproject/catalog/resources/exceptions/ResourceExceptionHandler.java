@@ -9,13 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.portfolioproject.catalog.services.exceptions.EntityNotFoundException;
+import com.portfolioproject.catalog.services.exceptions.ObjtNotFoundException;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
 
-	@ExceptionHandler(EntityNotFoundException.class)
-	ResponseEntity<StandardError> entityNotFoundFromService(EntityNotFoundException exception,
+	@ExceptionHandler(ObjtNotFoundException.class)
+	ResponseEntity<StandardError> entityNotFoundFromService(ObjtNotFoundException exception,
 			HttpServletRequest request){
 		
 		StandardError err = new StandardError();
