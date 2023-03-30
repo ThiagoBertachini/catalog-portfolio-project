@@ -33,4 +33,9 @@ public class CategoryService {
 				() -> new EntityNotFoundException("Entity not found for id: -[" + id + "]-"));
 		return new CategoryDTO(entity);
 	}
+
+	public CategoryDTO insert(CategoryDTO categoryDTO) {
+		Category entity = new Category(categoryDTO);
+		return new CategoryDTO(categoryRepository.save(entity));
+	}
 }

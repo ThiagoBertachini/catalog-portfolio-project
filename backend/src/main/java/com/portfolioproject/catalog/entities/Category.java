@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.portfolioproject.catalog.dto.CategoryDTO;
+
 @Entity
 @Table(name = "tb_category")
 public class Category implements Serializable{
@@ -25,6 +27,10 @@ public class Category implements Serializable{
 	public Category(Long id, String name) {
 		this.id = id;
 		this.name = name;
+	}
+
+	public Category(CategoryDTO categoryDTO) {
+		this.name = categoryDTO.getName();
 	}
 
 	public Long getId() {
