@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler.Builder;
 import com.portfolioproject.catalog.services.exceptions.IntegrityDataBaseException;
 import com.portfolioproject.catalog.services.exceptions.ObjtNotFoundException;
 
