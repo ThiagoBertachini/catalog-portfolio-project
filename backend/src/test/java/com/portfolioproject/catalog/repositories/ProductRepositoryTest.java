@@ -60,4 +60,20 @@ public class ProductRepositoryTest{
 					productRepository.deleteById(invalidId);
 				});
 	}
+	
+	@Test
+	public void findByIdShouldReturnNonEmptyObjectWhenIdExists() {
+				 
+		Optional<Product> result = productRepository.findById(validId);
+		
+		Assertions.assertTrue(!result.isEmpty());
+	}
+	
+	@Test
+	public void findByIdShouldReturnEmptyObjectWhenInvalidId() {
+				 
+		Optional<Product> result = productRepository.findById(invalidId);
+		
+		Assertions.assertTrue(result.isEmpty());
+	}
 }
